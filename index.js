@@ -23,7 +23,7 @@ const winningCombinations = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]
+  [2, 4, 6],
 ];
 
 // -- Functions --
@@ -47,10 +47,10 @@ const swapTurns = () => {
 
 const updateCurrentStatus = () => {
   if (unicornTurn) {
-    currentBeastStatusImg.src = "https://assets.codepen.io/2558758/unicorn.png";
+    currentBeastStatusImg.src = "unicorn.png";
     currentBeastStatusImg.alt = "unicorn";
   } else {
-    currentBeastStatusImg.src = "https://assets.codepen.io/2558758/dragon.png";
+    currentBeastStatusImg.src = "dragon.png";
     currentBeastStatusImg.alt = "dragon";
   }
 };
