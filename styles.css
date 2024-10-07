@@ -44,7 +44,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("https://raw.githubusercontent.com/anniebombanie/tic-tac-toe/master/img/fantasy-bg.jpg");
+  background-image: url("fantasy-bg.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -59,7 +59,6 @@ h1 {
   margin: 15px auto 5%;
   text-align: center;
   font-size: var(--h1-font-size);
-  /* text-shadow: 3px 3px #55acee; */
 }
 h1::before,
 h1::after {
@@ -69,31 +68,6 @@ h1::after {
   background-size: 100%;
   top: 50%;
   transform: translateY(-50%);
-}
-h1::before {
-  content: "";
-  background-image: url("https://assets.codepen.io/2558758/fire.png");
-  left: 0;
-  width: calc(93px / 2.1);
-  height: calc(96px / 2.1);
-}
-@media (min-width: 1024px) {
-  h1::before {
-    left: -64px;
-  }
-}
-h1::after {
-  content: "";
-  background-image: url("https://assets.codepen.io/2558758/stars.png");
-  right: 0;
-  width: calc(91px / 2);
-  height: calc(88px / 2);
-}
-
-@media (min-width: 1024px) {
-  h1::after {
-    right: -64px;
-  }
 }
 
 h1 span {

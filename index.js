@@ -88,9 +88,7 @@ const endGame = (draw) => {
   if (draw) {
     winningMessageText.innerText = `draw!`;
   } else {
-    winningMessageImg.src = unicornTurn
-      ? "https://assets.codepen.io/2558758/unicorn.png"
-      : "https://assets.codepen.io/2558758/dragon.png";
+    winningMessageImg.src = unicornTurn ? "unicorn.png" : "dragon.png";
     winningMessageImg.alt = unicornTurn ? "unicorn" : "dragon";
     winningMessage.insertBefore(winningMessageImg, winningMessageText);
     winningMessageText.innerText = `wins!!!`;
