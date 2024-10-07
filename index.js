@@ -12,11 +12,6 @@ const winningMessageText = document.querySelector("[data-winning-message] p");
 const winningMessageImg = document.createElement("img");
 
 // -- Game Variables --
-let gameIsLive = true;
-
-let unicornTurn = true;
-
-const winner = null;
 
 const AI_PLAYER = "dragon";
 
@@ -26,9 +21,7 @@ const HUMAN_PLAYER = "unicorn";
 
 const HUMAN_PLAYER_IMG = "unicorn.png";
 
-let currentPlayer = "";
-
-const winningCombinations = [
+const WINNING_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -38,6 +31,10 @@ const winningCombinations = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+let gameIsLive = true;
+
+let currentPlayer = "";
 
 // -- Functions --
 const placeBeastImg = (cell, currentBeast) => {
@@ -55,7 +52,7 @@ const updateCurrentStatus = () => {
 };
 
 const checkWin = (currentBeast) => {
-  return winningCombinations.some((combination) => {
+  return WINNING_COMBINATIONS.some((combination) => {
     return combination.every((i) => {
       return cells[i].classList.contains(currentBeast);
     });
@@ -274,7 +271,7 @@ function minimax(board, depth, isMaximizing) {
 }
 
 function checkWinner() {
-  for (let combo of winningCombinations) {
+  for (let combo of WINNING_COMBINATIONS) {
     if (
       cells[combo[0]].classList.contains(AI_PLAYER) &&
       cells[combo[1]].classList.contains(AI_PLAYER) &&
